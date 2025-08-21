@@ -280,6 +280,13 @@ button:focus {
   padding-left: 45px !important;
 }
 
+.heading-description
+{
+  font-size: 1.2em !important;
+  padding-left: 45px !important;
+  font-weight: 200 !important;
+}
+
 .main-name {
   color: #cd5ff8;
 }
@@ -728,7 +735,7 @@ button:focus {
 .fork-btn-inner {
   line-height: 1.4em !important;
   background-color: #934cce5e !important;
-  padding: 0.25rem 1.1rem !important;
+  padding: 0.25rem 0.5rem !important;
   vertical-align: middle !important;
   text-align: center !important;
 }
