@@ -644,35 +644,30 @@ button:focus {
   padding-left: 80px !important;
 }
 
-/* From Uiverse.io by kleenpulse */ 
 .btn-primary-outlined {
   --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
   --border-width: 0.125em;
-  --curve-size: 0.5em;
+  --radius: 1.5em; /* controla el redondeo */
   --blur: 30px;
-  --bg: #080312;
+  --bg: #13121c;
   --color: #afffff;
+
   color: var(--color);
   cursor: pointer;
-  /* use position: relative; so that BG is only for .btn-primary */
   position: relative;
   isolation: isolate;
   display: inline-grid;
   place-content: center;
-  padding: 0.5em 1.5em;
+  padding: 0.25em 1em;
   font-size: 17px;
   border: 0;
-  text-transform: uppercase;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
-  clip-path: polygon(
-    /* Top-left */ 0% var(--curve-size),
-    var(--curve-size) 0,
-    /* top-right */ 100% 0,
-    100% calc(100% - var(--curve-size)),
-    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
-    /* bottom-right 2 */ 0 100%
-  );
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius); 
   transition: color 250ms;
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  overflow: hidden;
 }
 
 .btn-primary-outlined::after,
@@ -680,66 +675,45 @@ button:focus {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: var(--radius); /* 👈 asegúrate de redondear también */
 }
 
 .btn-primary-outlined::before {
   background: var(--border-color);
   background-size: 300% 300%;
   animation: move-bg7234 5s ease infinite;
-  z-index: -2;
+  z-index: 0;
+  padding: var(--border-width); /* da grosor al borde */
+  transform: translateX(-101%);
+  transition: transform 300ms;
 }
 
 @keyframes move-bg7234 {
-  0% {
-    background-position: 31% 0%;
-  }
-
-  50% {
-    background-position: 70% 100%;
-  }
-
-  100% {
-    background-position: 31% 0%;
-  }
+  0% { background-position: 31% 0%; }
+  50% { background-position: 70% 100%; }
+  100% { background-position: 31% 0%; }
 }
 
 .btn-primary-outlined::after {
   background: var(--bg);
   z-index: -1;
-  clip-path: polygon(
-    /* Top-left */ var(--border-width)
-      calc(var(--curve-size) + var(--border-width) * 0.5),
-    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
-    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
-    calc(100% - var(--border-width))
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-    /* bottom-right 1 */
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-      calc(100% - var(--border-width)),
-    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
-  );
-  transition: clip-path 500ms;
+  margin: var(--border-width); /* respeta el borde */
+  border-radius: calc(var(--radius) - var(--border-width));
+  width: 96%;
+  right: 0;
+  left: auto;
+  transition: background 300ms, width 0.3s ease;
+}
+.btn-primary-outlined span {
+  z-index: 1;
+}
+.btn-primary-outlined:where(:hover, :focus)::before
+{
+  transform: translateX(0%);
 }
 
-.btn-primary-outlined:where(:hover, :focus)::after {
-  clip-path: polygon(
-    /* Top-left */ calc(100% - var(--border-width))
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-    calc(100% - var(--border-width)) var(--border-width),
-    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
-    calc(100% - var(--border-width))
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-    /* bottom-right 1 */
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-      calc(100% - var(--border-width)),
-    /* bottom-right 2 */
-      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
-      calc(100% - var(--border-width))
-  );
-  transition: 200ms;
-}
-
-.btn-primary-outlined:where(:hover, :focus) {
+.btn-primary-outlined:hover,
+.btn-primary-outlined:focus {
   color: #fff;
 }
 

@@ -32,8 +32,8 @@ function Home() {
                 {t("description")}
               </h2>
 
-              <div>
-                <PrimaryButton>Contacto</PrimaryButton>
+              <div style={{paddingLeft: 40}}>
+                <PrimaryButton text={t("contact me")} />
               </div>
              
               <div style={{ padding: 50, textAlign: "left" }}>
