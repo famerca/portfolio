@@ -13,7 +13,9 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillGithub,
 } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 import { CgFileDocument } from "react-icons/cg";
 
@@ -45,9 +47,13 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+        <Navbar.Brand href="https://www.linkedin.com/in/fabian-flores-a783091a8/" target="_blank" className="d-flex">
+          <FaLinkedinIn title="LinkedIn" className="header-icons" />
         </Navbar.Brand>
+        <Navbar.Brand href="https://github.com/famerca" target="_blank" className="d-flex">
+          <AiFillGithub title="Github" className="header-icons" />
+        </Navbar.Brand>
+
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {

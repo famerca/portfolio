@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
+import homeLogo from "../../Assets/portrait.jpg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
 import { useTranslation } from 'react-i18next';
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 function Home() {
   const { t } = useTranslation();
@@ -25,11 +26,16 @@ function Home() {
 
               <h1 className="heading-name">
                 {t("im")}
-                <strong className="main-name"> Fabian Flores</strong>
+                <strong className="main-name"> Fabian</strong>
               </h1>
               <h2 className="heading-description">
                 {t("description")}
               </h2>
+
+              <div>
+                <PrimaryButton>Contacto</PrimaryButton>
+              </div>
+             
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
@@ -39,8 +45,8 @@ function Home() {
               <img
                 src={homeLogo}
                 alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                className="img-fluid img-home"
+                style={{ maxHeight: "350px" }}
               />
             </Col>
           </Row>
