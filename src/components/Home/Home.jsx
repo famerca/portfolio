@@ -12,8 +12,8 @@ function Home() {
   const { t } = useTranslation();
 
   return (
-    <section>
-      <Container fluid className="home-section background" id="home">
+    <section className="background">
+      <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
           <Row>

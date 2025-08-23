@@ -280,17 +280,11 @@ button:focus {
 
 .background
 {
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-image: var(--image-gradient), url(./Assets/background.png);
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
 }
 
-.background-inverse
-{
-  background-image: var(--image-gradient-inverse), url(./Assets/home-bg.jpg);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-}
 
 .home-content {
   padding: 9rem 0 2rem !important;
