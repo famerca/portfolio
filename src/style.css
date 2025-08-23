@@ -11,6 +11,12 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
+    --image-gradient-inverse: linear-gradient(
+    to top left,
+    rgba(12, 10, 22, 0.863),
+    rgba(17, 16, 16, 0.678)
+  );
+
   --imp-text-color: #c770f0;
 }
 
@@ -268,11 +274,22 @@ button:focus {
 .home-section {
   position: relative;
   z-index: 1;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+}
+
+.background
+{
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
+}
+
+.background-inverse
+{
+  background-image: var(--image-gradient-inverse), url(./Assets/home-bg.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .home-content {
@@ -656,7 +673,6 @@ button:focus {
   cursor: pointer;
   position: relative;
   isolation: isolate;
-  display: inline-grid;
   place-content: center;
   padding: 0.25em 1em;
   font-size: 17px;
@@ -668,6 +684,32 @@ button:focus {
   background-size: 300% 300%;
   animation: move-bg7234 5s ease infinite;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.btn-primary-outlined svg
+{
+  margin-left: 0px;
+  width: 0;
+  animation-name: mover-suavemente;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* Muy importante para el efecto de ida y vuelta */
+  transition: margin-left 0.6s ease-in-out, width 0.3s ease-in-out;
+}
+
+@keyframes mover-suavemente {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5%); 
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .btn-primary-outlined::after,
@@ -710,6 +752,13 @@ button:focus {
 .btn-primary-outlined:where(:hover, :focus)::before
 {
   transform: translateX(0%);
+}
+
+.btn-primary-outlined:where(:hover, :focus) svg
+{
+  width: 17px;
+  margin-left: 10px;
+  transition: margin-left 0.1s ease-in-out, width 0.5s ease-in-out;
 }
 
 .btn-primary-outlined:hover,

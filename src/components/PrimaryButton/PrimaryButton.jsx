@@ -1,6 +1,7 @@
 //const style = import("PrimaryButton.css");
+import { FaArrowRight } from "react-icons/fa";
 
-const PrimaryButton = ({ text, onClick }) => {
+const PrimaryButton = ({ text, icon = false , onClick }) => {
   return (
     <button
       className="btn-primary-outlined"
@@ -10,6 +11,11 @@ const PrimaryButton = ({ text, onClick }) => {
       <span>
         {text}
       </span>
+
+      {icon && <FaArrowRight />}
+
+
+      
     </button>
   );
 };

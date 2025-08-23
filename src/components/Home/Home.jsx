@@ -7,12 +7,13 @@ import Type from "./Type";
 import { useTranslation } from 'react-i18next';
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
+
 function Home() {
   const { t } = useTranslation();
 
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container fluid className="home-section background" id="home">
         <Particle />
         <Container className="home-content">
           <Row>
@@ -33,10 +34,10 @@ function Home() {
               </h2>
 
               <div style={{paddingLeft: 40}}>
-                <PrimaryButton text={t("contact me")} />
+                <PrimaryButton text={t("contact me")} icon={true} />
               </div>
              
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 40, paddingTop: 0, textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
