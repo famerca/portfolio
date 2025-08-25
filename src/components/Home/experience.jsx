@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from 'react-i18next';
+import Timeline from "./Timeline";
 
 
 const Experience = () => {
@@ -11,6 +12,7 @@ const Experience = () => {
                     <h1 style={{ fontSize: "2.6em" }}>
                         <span className="purple">{t("experience")}</span>
                     </h1>
+                    <Timeline />
                 </Col>
             </Row>
         </Container>
