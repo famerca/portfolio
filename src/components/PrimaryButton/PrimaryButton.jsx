@@ -1,4 +1,3 @@
-//const style = import("PrimaryButton.css");
 import { FaArrowRight } from "react-icons/fa";
 
 const PrimaryButton = ({ text, icon = false , onClick }) => {

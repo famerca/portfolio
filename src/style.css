@@ -881,7 +881,7 @@ button:focus {
 
 /* --------- */
 .timeline {
-  border-left: 1px solid hsl(0, 0%, 90%);
+  /* border-left: 1px solid hsl(0, 0%, 90%); */
   position: relative;
   list-style: none;
   text-align: left;
@@ -891,17 +891,53 @@ button:focus {
   position: relative;
 }
 
-.timeline .timeline-item:after {
-  position: absolute;
-  display: block;
-  top: 0;
+.timeline-item:before
+{
+    content: "";
+    position: absolute;
+    top: 22px;
+    height: calc(100% - 4px);
+    width: 1px;
+    background-color: var(--imp-text-color) ;
+    left: -32px;
+}
+
+.timeline h5
+{
+  color: var(--imp-text-color);
+}
+
+.timeline p
+{
+  color: white;
+}
+
+.timeline p.text-muted
+{
+  color: rgb(83, 83, 83) !important;
 }
 
 .timeline .timeline-item:after {
-  background-color: hsl(0, 0%, 90%);
+  position: absolute;
+  display: block;
+  top: 5px;
+  background-color: var(--imp-text-color) ;
   left: -38px;
   border-radius: 50%;
-  height: 11px;
-  width: 11px;
+  height: 14px;
+  width: 14px;
   content: "";
+}
+
+.home-experience
+{
+  max-width: 500px;
+  margin-left: 40px;
+}
+
+.home-experience h1
+{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: left;
 }
