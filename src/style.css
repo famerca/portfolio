@@ -910,11 +910,13 @@ button:focus {
 .timeline p
 {
   color: white;
+  font-weight: 600;
 }
 
 .timeline p.text-muted
 {
-  color: rgb(83, 83, 83) !important;
+  color: #634772 !important;
+  font-weight: 500;
 }
 
 .timeline .timeline-item:after {
