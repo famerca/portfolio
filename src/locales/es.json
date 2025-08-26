@@ -8,11 +8,18 @@
     "contact me": "Contáctame",
     "experience": "Experiencia",
     "works": {
+        "duties": "Mis cargos",
         "landing": {
             "title": "Desarrollo de Landing Pages para Campaña de Marketing Digital",
             "description": "Creación y optimización de landing pages de alta conversión para una campaña en Google Ads, dirigida a la venta de seguros de la marca Sura.",
             "start": "abril del 2025",
-            "end": "junio del 2025"
+            "end": "junio del 2025",
+            "duties": [
+                "Diseño de interfaces de usuario",
+                "Optimización de conversión",
+                "Desarrollo del front-end y back-end usando React y Next.js",
+                "Integración de Google Ads y Google Analytics"
+            ]
         },
         "xtetic": {
             "title": "Desarrollo de un Sistema de Verificación de Licencias Médicas",            
@@ -31,6 +38,13 @@
             "description": "Desarrollo full-stack de un sistema interno para la gestión de un gimnasio. Me centré en la implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros.",
             "start": "enero del 2023",
             "end": "septiembre del 2023"
+        },
+        "artofgalaxy": {
+            "title": "Implementación de Aplicación Web con Diseño Moderno",
+            "description": "Participé en la creación de una aplicación web, enfocada en una experiencia de usuario (UX) atractiva y un diseño moderno. Se implementaron múltiples animaciones y efectos para una interfaz de usuario (UI) llamativa y dinámica.",
+            "start": "febrero del 2025",
+            "end": "marzo del 2025"
         }
+        
     }
 }

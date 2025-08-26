@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Timeline from "./Timeline";
 import Image from "react-bootstrap/Image";
 import img  from "../../Assets/home-main.svg";
+import Work from "./work";
 
 const Experience = () => {
     const { t } = useTranslation();
@@ -18,7 +19,7 @@ const Experience = () => {
                     </section>
                 </Col>
                 <Col md={5} className="home-about-body">
-                    <Image src={img} alt="experience" className="img-fluid" />
+                    <Work active={"landing"} />
                 </Col>
             </Row>
         </Container>

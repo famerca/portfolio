@@ -8,17 +8,30 @@
     "contact me": "Contact me",
     "experience": "Experience",
     "works": {
+        "duties": "My duties",
         "landing": {
             "title": "Landing Page Development for Digital Marketing Campaign",
             "description": "Created and optimized high-converting landing pages for a Google Ads campaign, aimed at selling Sura brand insurance.",
             "start": "april 2025",
-            "end": "june 2025"
+            "end": "june 2025",
+            "duties": [
+                "User interface design",
+                "Conversion optimization",
+                "Front-end and back-end development using React and Next.js",
+                "Integration of Google Ads and Google Analytics"
+            ]
         },
         "xtetic": {
             "title": "Medical License Verification System Development",
             "description": "Development of an automated system for validating medical professional licenses for the company Xtetic. The project utilized web scraping to streamline and verify information from multiple sources, optimizing a critical process.",
             "start": "december 2024",
-            "end": "february 2025"
+            "end": "february 2025",
+            "duties": [
+                "User interface design",
+                "Conversion optimization",
+                "Front-end and back-end development using React and Next.js",
+                "Integration of Google Ads and Google Analytics"
+            ]
         },
         "inglesenminutos": {
             "title": "Development of an AI-Powered Educational Web Application",
@@ -31,6 +44,13 @@
             "description": "Development of an internal management system for a gym. My focus was on implementing payment, membership, and plan modules, as well as member registration and control.",
             "start": "january 2023",
             "end": "november 2023"
+        },
+        "artofgalaxy": {
+            "title": "Web Application Implementation with Modern Design",
+            "description": "Participated in the creation of a web application focused on an engaging user experience (UX) and a modern design. Multiple animations and effects were implemented for a visually appealing and dynamic user interface (UI).",
+            "start": "february 2025",
+            "end": "march 2025"
         }
+        
     }
 }

@@ -889,6 +889,7 @@ button:focus {
 
 .timeline .timeline-item {
   position: relative;
+  cursor: pointer;
 }
 
 .timeline-item:before
@@ -929,6 +930,32 @@ button:focus {
   height: 14px;
   width: 14px;
   content: "";
+  transition: all 0.3s ease 0s;
+}
+
+.timeline-item:where(:hover, :focus)::after, .timeline-item.active::after
+{
+  transform: scale(1.6);
+}
+
+
+
+.timeline-item svg
+{
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  top: 5px;
+  left: -38px;
+  z-index: 1;
+  color: white;
+  transition: all 0.3s ease 0s;
+  transform: scale(0);  
+}
+
+.timeline-item:where(:hover, :focus) svg, .timeline-item.active svg
+{
+  transform: scale(1);
 }
 
 .home-experience
@@ -942,4 +969,41 @@ button:focus {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: left;
+}
+
+.work-section
+{
+  position: relative;
+  width: 100%;
+}
+
+.work-section img
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+}
+
+.work-section h2
+{
+  color: var(--imp-text-color);
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.work-skills
+{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.work-duties
+{
+  color: white;
 }
