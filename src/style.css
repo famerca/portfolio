@@ -975,9 +975,16 @@ button:focus {
 {
   position: sticky;
   width: 100%;
-  top: 0;
+  top: 100px;
+  min-height: 400px;
   bottom: 0;
 }
+
+.work-section.active
+{
+  min-height: 100px;
+}
+
 .work-section img
 {
   width: 100%;
@@ -1021,6 +1028,7 @@ button:focus {
   overflow: hidden;
   width: 0%;
   transition: width 0.5s ease-out;
+  font-size: 1.4em;
 }
 
 .active.work-section .work-skills
