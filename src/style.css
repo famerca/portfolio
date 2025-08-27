@@ -1043,3 +1043,11 @@ button:focus {
   max-height: 600px;
   transition-delay: 0.5s;
 }
+
+.light-tooltip {
+  --bs-tooltip-bg: #fff !important;       /* Color de fondo blanco */
+  --bs-tooltip-color: #000 !important;    /* Color de texto */
+  --bs-tooltip-arrow-color: #fff !important; /* Color de la flecha */
+  --bs-tooltip-border: 1px solid #ccc !important; /* Borde opcional */
+  
+}
