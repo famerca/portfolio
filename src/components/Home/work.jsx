@@ -10,8 +10,10 @@ const Work = ({active}) => {
     const key = `works.${active}.duties`;
     console.log(key);   
 
-    return (
-        <div className="work-section" >
+    let content;
+
+    if(active == '')
+        content = <>
             <h2>
                 {t("works.duties")}
             </h2>
@@ -24,10 +26,29 @@ const Work = ({active}) => {
                 </li>
             </ul>
             <ul className="work-duties">
-                {t( key, { returnObjects: true }).map((item, index) => (
-                    <li key={index}>{item}</li>
-                ))}
             </ul>
+        </>;
+    else
+        content = <>
+            <h2>
+                {t("works.duties")}
+            </h2>
+            <ul className="work-skills">
+                <li>
+                    <React h={24} w={24} />
+                </li>
+                <li>
+                    <Nextjs h={24} w={24} />
+                </li>
+            </ul>
+            <ul className="work-duties">
+                {t(key, { returnObjects: true }).map((item, index) => <li key={index}>{item}</li>)}
+            </ul>
+        </>;
+
+    return (
+        <div className={"work-section " + (active != '' ? "active" : "")}>
+            {content}
             <Image src={img} alt="experience" className="img-fluid" />
         </div>
     )

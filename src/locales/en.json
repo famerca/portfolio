@@ -27,29 +27,47 @@
             "start": "december 2024",
             "end": "february 2025",
             "duties": [
-                "User interface design",
-                "Conversion optimization",
-                "Front-end and back-end development using React and Next.js",
-                "Integration of Google Ads and Google Analytics"
+                "I was responsible for the analysis and design of a web scraper for medical license validation, defining the logic and architecture for the data extraction process.",
+                "I developed a program in Node.js to implement the scraper and create a separate API.",
+                "I handled the integration with the JotForm and Pipedrive APIs, consuming data to enrich information and automate the workflow.",
+                "I was in charge of the complete project deployment on AWS, configuring the environment to ensure the service's availability and correct operation."
             ]
         },
         "inglesenminutos": {
             "title": "Development of an AI-Powered Educational Web Application",
             "description": "Participated in the creation of an educational platform for learning English, integrating AI models from Google and AssemblyAI for speech recognition.",
             "start": "january 2024",
-            "end": "september 2024"
+            "end": "september 2024",
+            "duties": [
+                "Integration with assemblyAI and speech.",
+                "Interface and logic for audio recording.",
+                "Logic for incorrect word recognition.",
+                "Payment and membership system.",
+                "User registration system."
+            ]
         },
         "integragym": {
             "title": "Internal Management System Development for a Gym",
             "description": "Development of an internal management system for a gym. My focus was on implementing payment, membership, and plan modules, as well as member registration and control.",
             "start": "january 2023",
-            "end": "november 2023"
+            "end": "november 2023",
+            "duties": [
+                "I implemented and configured a secure payment system for the gym, managing transaction processing and the financial history of all members.",
+                "I developed a complete interface for membership management, allowing for the creation, editing, and tracking of each user's status.",
+                "I created the user interface and logic for member check-ins and check-outs, controlling access and tracking attendance at the gym."
+            ]
         },
         "artofgalaxy": {
             "title": "Web Application Implementation with Modern Design",
             "description": "Participated in the creation of a web application focused on an engaging user experience (UX) and a modern design. Multiple animations and effects were implemented for a visually appealing and dynamic user interface (UI).",
             "start": "february 2025",
-            "end": "march 2025"
+            "end": "march 2025",
+            "duties": [
+                "Implementation of animations and effects",
+                "Implementation of a well-designed grid layout",
+                "Implementation of interactive slideshows",
+                "Correction of design errors"
+            ]
         }
         
     }

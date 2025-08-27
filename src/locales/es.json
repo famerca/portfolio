@@ -25,25 +25,49 @@
             "title": "Desarrollo de un Sistema de Verificación de Licencias Médicas",            
             "description": "Creación de un sistema automatizado para la validación de licencias de profesionales médicos para la empresa Xtetic. El proyecto utilizó web scraping para agilizar y verificar la información de múltiples fuentes, optimizando un proceso crítico.",
             "start": "diciembre del 2024",
-            "end": "febrero del 2025"
+            "end": "febrero del 2025",
+            "duties": [
+                "Fue responsable de la análisis y diseño de un scraper web para la validación de licencias médicas, definiendo la lógica y arquitectura para la extracción de datos.",
+                "Desarrollé un programa en Node.js para implementar el scraper y crear una API separada.",
+                "Manejé la integración con los APIs JotForm y Pipedrive, consumiendo datos para enriquecer la información y automatizar el flujo de trabajo.",
+                "Fue responsable de la completa implementación del servicio en AWS, configurando el entorno para garantizar la disponibilidad y la correcta operación del servicio."
+            ]
         },
         "inglesenminutos": {
             "title": "Desarrollo de una Aplicación Web de Aprendizaje mediante IA",
             "description": "Participación en la creación de una plataforma educativa para aprender el inglés, integrando modelos AI de Google y AssemblyAI para reconocimiento de voz.",
             "start": "enero del 2024",
-            "end": "septiembre del 2024"
+            "end": "septiembre del 2024",
+            "duties": [
+                "Integración con la API de assemblyAI y speech.",
+                "Interfaz y logica de grabación de audio.",
+                "Logica para reconocimiento de palabras incorrectas.",
+                "Sistema de pago y membresías.",
+                "Sistema de registro de usuarios."
+            ]
         },
         "integragym": {
             "title": "Desarrollo de Sistema de Gestión Interno para Gimnasio",
             "description": "Desarrollo full-stack de un sistema interno para la gestión de un gimnasio. Me centré en la implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros.",
             "start": "enero del 2023",
-            "end": "septiembre del 2023"
+            "end": "septiembre del 2023",
+            "duties": [
+                "Implementé y configuré un sistema de pagos seguro para el gimnasio, gestionando el procesamiento de transacciones y el historial financiero de los miembros.",
+                "Desarrollé una interfaz completa para la gestión de membresías, permitiendo la creación, edición y seguimiento del estado de cada usuario.",
+                "Creé la lógica y la interfaz de usuario para el registro de entrada y salida de los miembros, controlando el acceso y la asistencia al gimnasio."
+            ]
         },
         "artofgalaxy": {
             "title": "Implementación de Aplicación Web con Diseño Moderno",
             "description": "Participé en la creación de una aplicación web, enfocada en una experiencia de usuario (UX) atractiva y un diseño moderno. Se implementaron múltiples animaciones y efectos para una interfaz de usuario (UI) llamativa y dinámica.",
             "start": "febrero del 2025",
-            "end": "marzo del 2025"
+            "end": "marzo del 2025",
+            "duties": [
+                "Implementacion de animaciones y efectos",
+                "Implementacion de un disdeño bento grid",
+                "Implementacion de slideshows interactivos",
+                "Correcion de errores de diseño"
+            ]
         }
         
     }

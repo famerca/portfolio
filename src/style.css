@@ -973,17 +973,25 @@ button:focus {
 
 .work-section
 {
-  position: relative;
+  position: sticky;
   width: 100%;
+  top: 0;
+  bottom: 0;
 }
-
 .work-section img
 {
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
+  transition: width 0.5s ease-out;
+  transition-delay: 0.5s;
+
+}
+.work-section.active img
+{
+  transition-delay: 0s;
   width: 90px;
-  height: 90px;
 }
 
 .work-section h2
@@ -992,6 +1000,15 @@ button:focus {
   font-size: 1.5em;
   font-weight: 600;
   padding-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 0;
+  transition: max-width 0.5s ease-out;
+}
+
+.active.work-section h2
+{
+  max-width: 300px;
 }
 
 .work-skills
@@ -1001,9 +1018,28 @@ button:focus {
   display: flex;
   justify-content: flex-start;
   gap: 0.5em;
+  overflow: hidden;
+  width: 0%;
+  transition: width 0.5s ease-out;
+}
+
+.active.work-section .work-skills
+{
+  width: 100%;
 }
 
 .work-duties
 {
   color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  transition-delay: 0s;
+
+}
+
+.active.work-section .work-duties
+{
+  max-height: 600px;
+  transition-delay: 0.5s;
 }
