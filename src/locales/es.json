@@ -7,6 +7,25 @@
     "description": "Con más de 3 años de experiencia, construyo aplicaciones web interactivas utilizando una variedad de lenguajes y frameworks como React, Next.js y Express.js.",
     "contact me": "Contáctame",
     "experience": "Experiencia",
+    "proyects": {
+        "title": {
+            "first": "Mis Proyectos",
+            "second": "Recientes"
+        },
+        "description": "Aquí hay algunos proyectos en los que he trabajado recientemente.",
+        "surasalud": {
+            "title": "Polizas de salud",
+            "description": "Optimización de páginas de alta convertibilidad para una campaña de Google Ads dirigida a la venta de seguros de la marca Sura."
+        },
+        "suraautos": {
+            "title": "Polizas de autos",
+            "description": "Optimización de páginas de alta convertibilidad para una campaña de Google Ads dirigida a la venta de seguros de la marca Sura."
+        },
+        "artofgalaxy": {
+            "title": "Art of galaxy",
+            "description": "Aplicación React con diseño moderno. Para empresa de marketing."
+        }
+    },
     "works": {
         "duties": "Mis cargos",
         "landing": {

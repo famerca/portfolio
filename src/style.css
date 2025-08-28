@@ -483,8 +483,8 @@ button:focus {
 }
 
 .project-card {
-  padding-top: 50px !important;
-  padding-bottom: 50px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
@@ -496,10 +496,48 @@ button:focus {
   background-color: transparent !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  height: fit-content !important;
+  overflow: hidden;
+  cursor: pointer !important;
+  border-radius: 10px !important;
 }
+
+.project-card-view .skills
+{
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5em;
+  position: absolute;
+  bottom: 1em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 1.2em;
+}
+
+.project-card-view:hover .skills
+{
+  opacity: 1;
+}
+.project-card-view .link-icon
+{
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  font-size: 1.2em;
+  z-index: 4;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out;
+  font-size: 1.2em;
+}
+
+.project-card-view:hover .link-icon
+{
+
+  transform: scale(1);
+}
+
 .project-card-view:hover {
-  transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
@@ -518,6 +556,7 @@ button:focus {
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
+
 }
 
 .blog-link {
@@ -536,9 +575,65 @@ button:focus {
 }
 
 .card-img-top {
-  padding: 20px !important;
-  opacity: 0.8 !important;
+  width: 100%;
+  opacity: 1 !important;
   border-radius: 10px !important;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card-view:hover .card-img-top
+{
+  transform: scale(1.1);
+}
+
+.card-body
+{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+}
+
+.card-body p
+{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.project-card-view:hover .card-body p
+{
+  opacity: 1;
+}
+
+.card-body h5
+{
+  color: var(--imp-text-color);
+  text-align: left;
+}
+
+.project-card-view::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%,rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+  transition: height 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.project-card-view:where(:hover, :focus)::after
+{
+  height: 120%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%,rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 100%);
 }
 
 .blog-img {

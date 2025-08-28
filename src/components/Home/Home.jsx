@@ -7,6 +7,7 @@ import Type from "./Type";
 import { useTranslation } from 'react-i18next';
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import Experience from "./experience";
+import Projects from "../Projects/Projects";
 
 function Home() {
   const { t } = useTranslation();
@@ -54,6 +55,7 @@ function Home() {
         </Container>
       </Container>
       <Experience />
+      <Projects />
       <Home2 />
     </section>
   );
