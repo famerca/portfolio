@@ -352,6 +352,8 @@ button:focus {
   position: relative;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
+  z-index: 1;
+  color: white;
 }
 
 .home-about-description {
@@ -478,13 +480,11 @@ button:focus {
 .project-section {
   position: relative !important;
   padding-top: 150px !important;
-  padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
 }
 
 .project-card {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;

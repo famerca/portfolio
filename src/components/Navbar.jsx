@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 import { ES, US } from 'country-flag-icons/react/3x2';
 import { useTranslation } from 'react-i18next';
+
 
 import {
   AiFillStar,
@@ -23,6 +23,18 @@ function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
   const { t, i18n } = useTranslation();
+
+  const navigate = useNavigate();
+
+  const handleNavigateAndScroll = (path, elementId = "") => {
+
+    if(elementId === ""){
+      navigate(path);
+    }else{
+      navigate(path, { state: { scrollTo: elementId } });
+    }
+
+  };
 
 
   const handleLanguage = () => {
@@ -69,9 +81,7 @@ function NavBar() {
            
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
+                onClick={() => handleNavigateAndScroll("/", "home")}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("about")}
               </Nav.Link>
@@ -79,9 +89,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
+                onClick={() => handleNavigateAndScroll("/", "projects")}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
@@ -92,9 +100,7 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
+                onClick={() => handleNavigateAndScroll("/resume")}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> {t("resume")}
               </Nav.Link>

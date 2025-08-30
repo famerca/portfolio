@@ -24,6 +24,18 @@
         "artofgalaxy": {
             "title": "Art of galaxy",
             "description": "Aplicación React con diseño moderno. Para empresa de marketing."
+        },
+        "inglesenminutos": {
+            "title": "Ingles en minutos",
+            "description": "Plataforma educativa para aprender el inglés, integrando modelos AI de Google y AssemblyAI para reconocimiento de voz."
+        },
+        "integragym": {
+            "title": "Integra gym",
+            "description": "Sistema de gestión interna para gimnasio. Me centré en la implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros."
+        },
+        "latrikmedical": {
+            "title": "Latrik medical",
+            "description": "Sistema de gestión interna para una clinica. El front-end desarrollado en react."
         }
     },
     "works": {

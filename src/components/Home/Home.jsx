@@ -1,20 +1,35 @@
-import React from "react";
+import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/portrait.jpg";
 import Particle from "../Particle";
-import Home2 from "./Home2";
+import { useLocation } from "react-router-dom";
 import Type from "./Type";
 import { useTranslation } from 'react-i18next';
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import Experience from "./experience";
 import Projects from "../Projects/Projects";
+import About from "../About/About";
 
 function Home() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Revisa si hay un 'state' y si contiene la propiedad 'scrollTo'
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        // Ejecuta el scroll suave al elemento
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.state]);
+
   const { t } = useTranslation();
 
   return (
     <section className="background">
-      <Container fluid className="home-section" id="home">
+      <Container className="home-section" id="home">
         <Particle />
         <Container className="home-content">
           <Row>
@@ -56,7 +71,8 @@ function Home() {
       </Container>
       <Experience />
       <Projects />
-      <Home2 />
+      {/* <Home2 /> */}
+      <About />
     </section>
   );
 }
