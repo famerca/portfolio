@@ -1,12 +1,13 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
-  SiVsco,
   SiPostman,
   SiSlack,
   SiVercel,
   SiMacos,
 } from "react-icons/si";
+
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 function Toolstack() {
   return (
@@ -15,7 +16,7 @@ function Toolstack() {
         <SiMacos />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVsco />
+        <BiLogoVisualStudio />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPostman />

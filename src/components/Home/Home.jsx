@@ -13,6 +13,7 @@ import About from "../About/About";
 function Home() {
 
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Revisa si hay un 'state' y si contiene la propiedad 'scrollTo'
@@ -24,8 +25,6 @@ function Home() {
       }
     }
   }, [location.state]);
-
-  const { t } = useTranslation();
 
   return (
     <section className="background">
