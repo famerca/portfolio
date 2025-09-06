@@ -109,8 +109,8 @@
             "second": "Técnicas"
         },
         "description": {
-            "p1" : "Soy un desarrollador de software con experiencia multifacética, especializado en el ecosistema de JavaScript. He trabajado con una amplia variedad de tecnologías tanto en el frontend como en el backend. En el lado del cliente, domino frameworks como React y Angular, creando interfaces de usuario dinámicas y responsivas. Para el lado del servidor, he utilizado Next.js y Express.js, desarrollando aplicaciones robustas y escalables.",
-            "p2" : "Además de mi experiencia en JavaScript, he trabajado con PHP, centrándome en el desarrollo de plugins y temas personalizados para WordPress. Mis habilidades también se extienden al desarrollo móvil, donde he construido aplicaciones nativas y multiplataforma usando React Native y Flutter. Complemento estas habilidades con experiencia en web scraping utilizando herramientas como Playwright, extrayendo datos de manera eficiente para proyectos específicos."
+            "p1" : "Soy un desarrollador de software con experiencia <1>multifacética</1>, especializado en el <3>ecosistema de JavaScript</3>. He trabajado con una amplia variedad de tecnologías tanto en el <5>frontend como en el backend</5>. En el lado del cliente, domino frameworks como <7>React</7> y <9>Angular</9>, creando interfaces de usuario dinámicas y responsivas. Para el lado del servidor, he utilizado <11>Next.js</11> y <13>Express.js</13>, desarrollando aplicaciones robustas y escalables.",
+            "p2" : "Además de mi experiencia en JavaScript, he trabajado con <1>PHP</1>, centrándome en el desarrollo de <3>plugins y temas personalizados para WordPress</3>. Mis habilidades también se extienden al desarrollo móvil, donde he construido aplicaciones nativas y multiplataforma usando <7>React Native</7> y <9>Flutter</9>. Complemento estas habilidades con experiencia en <11>web scraping</11> utilizando herramientas como <13>Playwright</13>, extrayendo datos de manera eficiente para proyectos específicos."
         }
     }
 }

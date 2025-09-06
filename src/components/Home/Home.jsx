@@ -9,20 +9,24 @@ import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import Experience from "./experience";
 import Projects from "../Projects/Projects";
 import About from "../About/About";
+import Contact from "../Contact/Contact";
 
 function Home() {
 
   const location = useLocation();
   const { t } = useTranslation();
 
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   useEffect(() => {
     // Revisa si hay un 'state' y si contiene la propiedad 'scrollTo'
     if (location.state?.scrollTo) {
-      const element = document.getElementById(location.state.scrollTo);
-      if (element) {
-        // Ejecuta el scroll suave al elemento
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      scrollTo(location.state.scrollTo);
     }
   }, [location.state]);
 
@@ -49,7 +53,7 @@ function Home() {
               </h2>
 
               <div style={{paddingLeft: 40}}>
-                <PrimaryButton text={t("contact me")} icon={true} />
+                <PrimaryButton text={t("contact me")} icon={true} onClick={() => scrollTo("contact")} />
               </div>
              
               <div style={{ padding: 40, paddingTop: 0, textAlign: "left" }}>
@@ -70,8 +74,8 @@ function Home() {
       </Container>
       <Experience />
       <Projects />
-      {/* <Home2 /> */}
       <About />
+      <Contact />
     </section>
   );
 }

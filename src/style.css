@@ -652,6 +652,43 @@ button:focus {
   border-color: #623686 !important;
 }
 
+.contact-left
+{
+  color: white;
+}
+.contact-email
+{
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-email span
+{
+  color: var(--imp-text-color);
+  font-size: 1.2em;
+  font-weight: 600;
+  border: 2px solid var(--imp-text-color);
+  padding: 0.2em 1em;
+  border-radius: 7px;
+}
+
+.contact-email a, .contact-email a:hover
+{
+  background-color: var(--imp-text-color);
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 7px;
+  transition: all 0.3s ease 0s;
+}
+
+.contact-email a:hover 
+{
+  scale: 1.05;
+}
+
 .btn-primary:hover {
   color: #fff !important;
   background-color: #6d20c5d7 !important;
