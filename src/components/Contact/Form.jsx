@@ -1,29 +1,31 @@
+import { FaArrowRight } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import "./form.css";
 
-const Form = () => {
+const FormContact = () => {
     const { t } = useTranslation();
     return (
-        <div className="contact-form">
-            <h1 className="contact-form-title">
-                <span className="purple">{t("contact me")}</span>
-            </h1>
-            <form>
+        <div className="form-container">    
+            <form className="form-contact" action="https://formspree.io/f/xmozzjzj" method="POST">
+                <h2>
+                    {t("contact.form.title")}
+                </h2>
+               <p>{t("contact.form.description")}</p>
                 <div className="form-group">
-                    <label htmlFor="name">{t("name")}</label>
-                    <input type="text" className="form-control" id="name" placeholder="Name" />
+                    <input type="text" className="form-control" name="name" placeholder={t("contact.form.name")} />
                 </div>
+            
                 <div className="form-group">
-                    <label htmlFor="email">{t("email")}</label>
-                    <input type="email" className="form-control" id="email" placeholder="Email" />
+                    <input type="email" className="form-control" name="email" placeholder={t("contact.form.email")} />
                 </div>
+                
                 <div className="form-group">
-                    <label htmlFor="message">{t("message")}</label>
-                    <textarea className="form-control" id="message" placeholder="Message"></textarea>
+                    <textarea className="form-control" rows={5} name="message" placeholder={t("contact.form.message")}></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">{t("send")}</button>
+                <button type="submit" className="btn btn-contact">{t('contact.form.submit')} <FaArrowRight /></button>
             </form>
         </div>
-    )
-}
+    );
+};
 
-export default Form
+export default FormContact;

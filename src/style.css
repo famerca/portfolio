@@ -730,6 +730,25 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  position: relative;
+}
+
+.tech-icons p{
+  font-size: 15px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease 0s;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.tech-icons svg
+{
+  transition: transform 0.4s ease 0s;
 }
 
 @media (max-width: 767px) {
@@ -743,6 +762,18 @@ button:focus {
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
+.tech-icons:hover p{
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.tech-icons:hover svg{
+  transform: scale(0.9) translateY(-10px);
+
+}
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;

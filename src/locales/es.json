@@ -104,13 +104,23 @@
     },
     "skills": 
     {
-        "title": {
-            "first": "Habilidades",
-            "second": "Técnicas"
-        },
+        "title": "Habilidades <1>Técnicas</1>",
         "description": {
             "p1" : "Soy un desarrollador de software con experiencia <1>multifacética</1>, especializado en el <3>ecosistema de JavaScript</3>. He trabajado con una amplia variedad de tecnologías tanto en el <5>frontend como en el backend</5>. En el lado del cliente, domino frameworks como <7>React</7> y <9>Angular</9>, creando interfaces de usuario dinámicas y responsivas. Para el lado del servidor, he utilizado <11>Next.js</11> y <13>Express.js</13>, desarrollando aplicaciones robustas y escalables.",
             "p2" : "Además de mi experiencia en JavaScript, he trabajado con <1>PHP</1>, centrándome en el desarrollo de <3>plugins y temas personalizados para WordPress</3>. Mis habilidades también se extienden al desarrollo móvil, donde he construido aplicaciones nativas y multiplataforma usando <7>React Native</7> y <9>Flutter</9>. Complemento estas habilidades con experiencia en <11>web scraping</11> utilizando herramientas como <13>Playwright</13>, extrayendo datos de manera eficiente para proyectos específicos."
+        },
+        "tools": "<0>Herramientas</0> que utilizo"
+    },
+    "contact": {
+        "title": "ENCUENTRAME EN",
+        "description": "Siéntase libre de <1>conectarse</1> conmigo",
+        "form":{
+            "title": "HABLEMOS",
+            "description": "¿Tienes alguna pregunta? ¿Necesitas una cotización personalizada? ¿Quieres planificar una consulta? Utiliza el formulario de abajo o conectate conmigo directamente y te responderé lo antes posible.",
+            "name": "Nombre",
+            "email": "Correo electrónico",
+            "message": "Mensaje",
+            "submit": "Enviar"
         }
     }
 }

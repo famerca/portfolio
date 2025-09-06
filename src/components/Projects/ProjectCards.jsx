@@ -10,7 +10,7 @@ function ProjectCards(props) {
   return (
     <a href={props.demoLink} target="_blank" rel="noreferrer">
       <Card className="project-card-view">
-        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+        <Card.Img loading="lazy" variant="top" src={props.imgPath} alt="card-img" />
         <span className="link-icon">
           <GoArrowUpRight />
         </span>

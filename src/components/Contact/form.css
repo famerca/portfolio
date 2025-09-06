@@ -1,0 +1,64 @@
+.form-contact
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-contact p
+{
+    color: white;
+    font-size: 1em;
+    text-align: left;
+}
+
+.form-contact h2
+{
+    color: var(--imp-text-color);
+    font-size: 1.5em;
+    margin-bottom: 0;
+    margin-top: 1em;
+    font-weight: 700;
+    text-align: left;
+}
+
+.btn-contact.btn, .btn-contact.btn:hover
+{
+    --bg-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+    background: var(--bg-color);
+    background-size: 300% 300%;
+    padding: 0.25em 2em;
+    color: white;
+    font-weight: 900;
+    border-radius: 1.5em;
+    animation: move-bg7234 5s ease infinite;
+    width: fit-content;
+    min-width: 150px;
+    margin: 1em auto;
+    margin-right: 1em;
+
+}
+
+.btn-contact.btn svg
+{
+  margin-left: 0px;
+  width: 0;
+  animation-name: mover-suavemente;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; /* Muy importante para el efecto de ida y vuelta */
+  transition: margin-left 0.6s ease-in-out, width 0.3s ease-in-out;
+}
+
+.btn-contact.btn:where(:hover, :focus) svg
+{
+  width: 17px;
+  margin-left: 10px;
+  transition: margin-left 0.1s ease-in-out, width 0.5s ease-in-out;
+}

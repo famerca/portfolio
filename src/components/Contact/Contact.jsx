@@ -1,10 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { useTranslation } from 'react-i18next';
-import Form from "./Form";
+import { useTranslation, Trans } from 'react-i18next';
+import FormContact from "./Form";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoSend, IoCopy } from "react-icons/io5";
@@ -15,9 +13,11 @@ const Contact = () => {
         <Container fluid className="home-section" id="contact">
             <Row>
                 <Col md={6} className="contact-left">
-                   <h1>FIND ME ON</h1>
+                   <h1>{t("contact.title")}</h1>
                     <p>
-                    Feel free to <span className="purple">connect </span>with me
+                        <Trans i18nKey="contact.description">
+                            t <span className="purple">t</span> t
+                        </Trans>
                     </p>
                     <ul className="home-about-social-links">
                         <li className="social-icons">
@@ -30,16 +30,7 @@ const Contact = () => {
                             <AiFillGithub />
                             </a>
                         </li>
-                        <li className="social-icons">
-                            <a
-                            href="https://twitter.com/Soumyajit4419"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="icon-colour  home-social-icons"
-                            >
-                            <AiOutlineTwitter />
-                            </a>
-                        </li>
+                       
                         <li className="social-icons">
                             <a
                             href="https://www.linkedin.com/in/soumyajit4419/"
@@ -50,16 +41,7 @@ const Contact = () => {
                             <FaLinkedinIn />
                             </a>
                         </li>
-                        <li className="social-icons">
-                            <a
-                            href="https://www.instagram.com/soumyajit4419"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="icon-colour home-social-icons"
-                            >
-                            <AiFillInstagram />
-                            </a>
-                        </li>
+                        
                     </ul>
                     <div className="contact-email">
                         <span>famersos@hotmail.com</span>
@@ -73,7 +55,7 @@ const Contact = () => {
                     </div>
                 </Col>
                 <Col md={6} className="contact-right">
-                    <Form />
+                    <FormContact />
                 </Col>
             </Row>
         </Container>

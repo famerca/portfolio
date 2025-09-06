@@ -14,7 +14,9 @@ function About() {
         <Container fluid className="home-about-section" id="about">
           <Container>
              <h1 className="project-heading">
-                Professional <strong className="purple">Skillset </strong>
+                <Trans i18nKey="skills.title">
+                  t <strong className="purple">t</strong>
+                </Trans>
               </h1>
             <Row style={{ justifyContent: "center", padding: "10px" }}>
               <Col
@@ -50,11 +52,13 @@ function About() {
             <Techstack />
 
             <h1 className="project-heading">
-              <strong className="purple">Tools</strong> I use
+               <Trans i18nKey="skills.tools">
+                  <strong className="purple">t</strong> t
+                </Trans>
             </h1>
             <Toolstack />
 
-            <Github />
+      
           </Container>
         </Container>
 
