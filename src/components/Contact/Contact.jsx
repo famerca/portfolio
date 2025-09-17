@@ -9,6 +9,10 @@ import { IoSend, IoCopy } from "react-icons/io5";
 
 const Contact = () => {
     const { t } = useTranslation();
+    const clipboard = () =>
+    {
+        navigator.clipboard.writeText("famersos@hotmail.com");
+    }
     return (
         <Container fluid className="home-section" id="contact">
             <Row>
@@ -22,7 +26,7 @@ const Contact = () => {
                     <ul className="home-about-social-links">
                         <li className="social-icons">
                             <a
-                            href="https://github.com/soumyajit4419"
+                            href="https://github.com/famerca"
                             target="_blank"
                             rel="noreferrer"
                             className="icon-colour  home-social-icons"
@@ -33,7 +37,7 @@ const Contact = () => {
                        
                         <li className="social-icons">
                             <a
-                            href="https://www.linkedin.com/in/soumyajit4419/"
+                            href="https://www.linkedin.com/in/fabian-flores-a783091a8/"
                             target="_blank"
                             rel="noreferrer"
                             className="icon-colour  home-social-icons"
@@ -45,7 +49,7 @@ const Contact = () => {
                     </ul>
                     <div className="contact-email">
                         <span>famersos@hotmail.com</span>
-                        <a className="btn" href="javascript:void(0)">
+                        <a className="btn" href="#email" onClick={clipboard}>
                             <IoCopy />
                         </a>
                         <a className="btn" href="mailto:famersos@hotmail.com">

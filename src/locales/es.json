@@ -121,6 +121,10 @@
             "email": "Correo electrónico",
             "message": "Mensaje",
             "submit": "Enviar"
-        }
+        },
+        "success": "Gracias por tu mensaje. Te contactaremos pronto."
+    },
+    "footer": {
+        "develop": "Diseñado y Desarrollado por"
     }
 }
