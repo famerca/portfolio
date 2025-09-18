@@ -142,6 +142,9 @@ button:focus {
 {
   border-radius: 50%;
   margin: 50px;
+  width: 80%;
+  max-width: 350px;
+  display: block;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
@@ -154,12 +157,18 @@ button:focus {
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    padding: 1rem 1rem !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
+  }
+  .img-home
+  {
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .navbar-brand {
@@ -295,22 +304,26 @@ button:focus {
 }
 
 .heading {
-  font-size: 2.4em !important;
-  padding-left: 50px !important;
+  font-size: 2.4em;
+  padding-left: 50px;
 }
 
 .heading-name {
-  font-size: 2.5em !important;
-  padding-left: 45px !important;
+  font-size: 2.5em;
+  padding-left: 45px;
 }
 
 .heading-description
 {
-  font-size: 1.2em !important;
-  padding-left: 45px !important;
-  font-weight: 200 !important;
+  font-size: 1.2em;
+  padding-left: 45px;
+  font-weight: 200;
 }
 
+.heading-padding
+{
+  padding-left: 45px;
+}
 .main-name {
   color: #cd5ff8;
 }
@@ -333,6 +346,10 @@ button:focus {
   }
   .Typewriter__cursor {
     display: none !important;
+  }
+  .heading-name, .heading-description, .heading-padding
+  {
+    padding-left: 0.5rem;
   }
 }
 
@@ -522,6 +539,10 @@ button:focus {
 {
   opacity: 1;
 }
+
+
+
+
 .project-card-view .link-icon
 {
   position: absolute;
@@ -541,10 +562,12 @@ button:focus {
   transform: scale(1);
 }
 
-.project-card-view:hover {
+.project-card-view:hover, .project-card-view.is-touched {
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
+
+
 
 .blog-card {
   padding-top: 50px !important;
@@ -606,7 +629,7 @@ button:focus {
 {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
 }
 
@@ -634,7 +657,7 @@ button:focus {
   z-index: 1;
 }
 
-.project-card-view:where(:hover, :focus)::after
+.project-card-view:where(:hover)::after
 {
   height: 120%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%,rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 100%);
@@ -705,6 +728,54 @@ button:focus {
   padding-top: 10px !important;
 }
 
+@media (hover: none) {
+    .project-card-view:hover{
+      box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+    }
+
+    .project-card-view:hover .skills, .project-card-view:hover .card-body p  {
+        /* Aquí puedes resetear los estilos que activan el hover, como opacity */
+        opacity: 0;
+    }
+
+    .project-card-view:hover .link-icon
+    {
+      transform: scale(0);
+    }
+    .project-card-view:where(:hover, :focus)::after 
+    {
+      height: 30%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .project-card-view:hover .card-img-top
+    {
+      transform: scale(1);
+    }
+
+    .project-card-view.is-touched::after
+    {
+      height: 120%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%,rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .project-card-view.is-touched .card-body p, .project-card-view.is-touched .skills
+    {
+      opacity: 1;
+    }
+
+    .project-card-view.is-touched .link-icon
+    {
+      transform: scale(1);
+    }
+
+    .project-card-view.is-touched .card-img-top
+    {
+      transform: scale(1.1);
+    }
+    
+}
+
 /* --------- */
 /* About */
 /* --------- */
@@ -755,6 +826,28 @@ button:focus {
   .tech-icons {
     margin: 10px !important;
   }
+  .card-body p
+  {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 16px;
+  }
+  .home-experience
+  {
+    margin-left: 15px !important;
+  }
+  .contact-email
+  {
+    flex-wrap: wrap;
+  }
+  .contact-email span
+  {
+    width: 100%;
+  }
+  .fork-btn
+  {
+    padding-top: 0 !important;
+  }
 }
 
 .tech-icons:hover {
@@ -795,6 +888,11 @@ button:focus {
   .about-img {
     padding-top: 0 !important;
   }
+  .project-card
+  {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
 }
 /* --------- */
 /* Resume */
@@ -812,6 +910,26 @@ button:focus {
   padding-top: 50px;
   padding-bottom: 50px;
   justify-content: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-pdf-page {
+  /* Establece el margen y el padding a 0 */
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-top: 1em !important;
+  
+  /* Asegúrate de que no haya espacio extra por overflow */
+  overflow: hidden;
+
+  /* Puedes ajustar la sombra para que se vea más limpio */
+  box-shadow: none; 
+}
+
+.custom-pdf-page .react-pdf__Page__textContent {
+  display: none !important;
 }
 
 .resume-left {
@@ -938,6 +1056,11 @@ button:focus {
     padding-right: 15px !important;
     padding-left: 15px !important;
   }
+
+  .home-header
+  {
+    padding-top: 10px !important;
+  }
 }
 .resume .resume-title {
   font-size: 2em;
@@ -1025,8 +1148,8 @@ button:focus {
 }
 
 .fork-btn {
-  font-size: 1.1em !important;
-  padding-top: 10px !important;
+  font-size: 1.1em;
+  padding-top: 10px;
 }
 
 .fork-btn-inner {

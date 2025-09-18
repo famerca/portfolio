@@ -10,10 +10,15 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
 
   return (
     <div>
@@ -27,15 +32,28 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Descargar CV
           </Button>
         </Row>
 
-        <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.5 : 0.6} />
+        <div className="resume">
+          <Document 
+            file={pdf} 
+            // Eliminamos la clase "d-flex justify-content-center"
+            // para que las páginas se apilen verticalmente.
+            onLoadSuccess={onDocumentLoadSuccess} 
+          >
+            {/* Si quieres mostrar todas las páginas: */}
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page 
+                key={`page_${index + 1}`} 
+                pageNumber={index + 1} 
+                scale={width > 786 ? 1.5 : 0.5} 
+                className="custom-pdf-page"
+              />
+            ))}
           </Document>
-        </Row>
+        </div>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
@@ -45,7 +63,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Descargar CV
           </Button>
         </Row>
       </Container>

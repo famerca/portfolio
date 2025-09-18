@@ -52,11 +52,11 @@ function Home() {
                 {t("description")}
               </h2>
 
-              <div style={{paddingLeft: 40}}>
+              <div className="heading-padding">
                 <PrimaryButton text={t("contact me")} icon={true} onClick={() => scrollTo("contact")} />
               </div>
              
-              <div style={{ padding: 40, paddingTop: 0, textAlign: "left" }}>
+              <div className="heading-padding" style={{ paddingTop: 0, textAlign: "left" }}>
                 <Type />
               </div>
             </Col>
@@ -65,8 +65,7 @@ function Home() {
               <img
                 src={homeLogo}
                 alt="home pic"
-                className="img-fluid img-home"
-                style={{ maxHeight: "350px" }}
+                className="img-home"
               />
             </Col>
           </Row>

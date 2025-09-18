@@ -31,7 +31,7 @@
         },
         "integragym": {
             "title": "Integra gym",
-            "description": "Sistema de gestión interna para gimnasio. Me centré en la implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros."
+            "description": "Sistema de gestión interna para gimnasio. Implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros."
         },
         "latrikmedical": {
             "title": "Latrik medical",
@@ -79,7 +79,7 @@
         },
         "integragym": {
             "title": "Desarrollo de Sistema de Gestión Interno para Gimnasio",
-            "description": "Desarrollo full-stack de un sistema interno para la gestión de un gimnasio. Me centré en la implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros.",
+            "description": "Desarrollo full-stack de un sistema interno para la gestión de un gimnasio. Implementación de módulos de pagos, membresías y planes, así como en el registro y control de miembros.",
             "start": "enero del 2023",
             "end": "septiembre del 2023",
             "duties": [
@@ -93,7 +93,7 @@
             "description": "Participé en la creación de una aplicación web, enfocada en una experiencia de usuario (UX) atractiva y un diseño moderno. Se implementaron múltiples animaciones y efectos para una interfaz de usuario (UI) llamativa y dinámica.",
             "start": "febrero del 2025",
             "end": "marzo del 2025",
-            "duties": [
+          "duties": [
                 "Implementacion de animaciones y efectos",
                 "Implementacion de un disdeño bento grid",
                 "Implementacion de slideshows interactivos",
@@ -127,4 +127,4 @@
     "footer": {
         "develop": "Diseñado y Desarrollado por"
     }
-}
+}  

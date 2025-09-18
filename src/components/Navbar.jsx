@@ -59,13 +59,36 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="https://www.linkedin.com/in/fabian-flores-a783091a8/" target="_blank" className="d-flex">
-          <FaLinkedinIn title="LinkedIn" className="header-icons" />
-        </Navbar.Brand>
-        <Navbar.Brand href="https://github.com/famerca" target="_blank" className="d-flex">
-          <AiFillGithub title="Github" className="header-icons" />
-        </Navbar.Brand>
+        <div className="d-flex align-items-center">
+          <Navbar.Brand href="https://www.linkedin.com/in/fabian-flores-a783091a8/" target="_blank" className="d-flex">
+            <FaLinkedinIn title="LinkedIn" className="header-icons" />
+          </Navbar.Brand>
+          <Navbar.Brand href="https://github.com/famerca" target="_blank" className="d-flex">
+            <AiFillGithub title="Github" className="header-icons" />
+          </Navbar.Brand>
+          <Nav.Item className="fork-btn d-block d-md-none">
+              {i18n.language === "en" ? (
+                <Button
+                  className="fork-btn-inner"
+                  onClick={handleLanguage}
+                >
+                  En
+                  <US title="United States" width="24" style={{ marginLeft: "5px" }} />
+                </Button>
+              ) : (
+                <Button
+                  className="fork-btn-inner"
+                  onClick={handleLanguage}
+                >
+                  Es
+                  <ES title="España" width="24" style={{ marginLeft: "5px" }} />
+                </Button>
+              )}
+              
+          </Nav.Item>
+        </div>
 
+          
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -76,6 +99,7 @@ function NavBar() {
           <span></span>
           <span></span>
         </Navbar.Toggle>
+       
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
            
@@ -106,7 +130,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
+            <Nav.Item className="fork-btn d-none d-md-block">
               {i18n.language === "en" ? (
                 <Button
                   className="fork-btn-inner"
