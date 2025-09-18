@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/portrait.jpg";
+import portrait300 from "../../Assets/portrait300.webp";
+import portrait500 from "../../Assets/portrait500.webp";
 import Particle from "../Particle";
 import { useLocation } from "react-router-dom";
 import Type from "./Type";
@@ -62,11 +63,22 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-home"
-              />
+                 <picture>
+                  {/* Fuente para pantallas grandes */}
+                  <source srcSet={portrait500} media="(min-width: 500px)" type="image/webp" />
+
+                  {/* Fuente para pantallas pequeñas */}
+                  <source srcSet={portrait300} media="(max-width: 500px)" type="image/webp" />
+                  
+                  {/* Imagen principal con alta prioridad para LCP */}
+                  <img
+                    src={portrait300}
+                    alt="Fabian Portrait"
+                    className="img-home"
+                    fetchpriority="high"
+                    loading="eager"
+                  />
+                </picture>
             </Col>
           </Row>
         </Container>

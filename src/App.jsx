@@ -15,9 +15,11 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./in.jsx"
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,6 +29,11 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <Router>
       <Preloader load={load} />
@@ -35,6 +42,10 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* Ruta para el español */}
+          <Route path="/es" element={<Home />} />
+          {/* Ruta para el inglés */}
+          <Route path="/en" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
