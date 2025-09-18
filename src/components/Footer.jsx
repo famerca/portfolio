@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  AiFillGithub
 } from "react-icons/ai";
+import { CgGitFork } from "react-icons/cg";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -20,7 +19,7 @@ function Footer() {
           <h3> {t("footer.develop")} Fabian Flores</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} SB</h3>
+         <h3>Template by <a href="https://github.com/soumyajit4419/Portfolio" target="_blank" rel="noopener noreferrer">Soumyajit4419</a></h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
@@ -43,6 +42,17 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
+              </a>
+            </li>
+
+            <li className="social-icons">
+              <a
+                href="https://github.com/famerca/portfolio"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <CgGitFork />
               </a>
             </li>
       
