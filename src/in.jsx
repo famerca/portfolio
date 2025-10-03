@@ -28,7 +28,7 @@ i18n
       // 'path' debe ser el primero para que lea la URL
       order: ['path', 'cookie', 'localStorage', 'navigator'],
       // Esto le dice al detector que busque en el primer segmento de la ruta (por ejemplo, `/es/`).
-      lookupFromPathIndex: 1, 
+      lookupFromPathIndex: 0, 
     },
   });
 

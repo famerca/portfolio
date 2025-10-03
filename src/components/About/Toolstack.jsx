@@ -3,8 +3,8 @@ import { Col, Row } from "react-bootstrap";
 import {
   SiPostman,
   SiSlack,
-  SiVercel,
-  SiUbuntu
+  SiUbuntu,
+  SiFigma
 } from "react-icons/si";
 
 import { BiLogoVisualStudio } from "react-icons/bi";
@@ -29,8 +29,8 @@ function Toolstack() {
         <p>Slack</p>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-        <p>Vercel</p>
+        <SiFigma />
+        <p>Figma</p>
       </Col>
     </Row>
   );

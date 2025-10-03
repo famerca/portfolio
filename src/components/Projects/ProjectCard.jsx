@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, forwardRef } from "react";
 import Card from "react-bootstrap/Card";
 import { GoArrowUpRight } from "react-icons/go";
 
-function ProjectCards(props) {
+const ProjectCard = forwardRef((props, ref) => {
   const [isTouched, setIsTouched] = useState(false);
   const touchTimerRef = useRef(null);
 
@@ -40,8 +40,9 @@ function ProjectCards(props) {
       target="_blank" 
       rel="noreferrer" 
       onClick={handleClick}
+      
     >
-      <Card className={`project-card-view ${isTouched ? 'is-touched' : ''}`}>
+      <Card ref={ref} className={`project-card-view ${isTouched ? 'is-touched' : ''} ${props.show ? 'show' : ''}`}>
         <Card.Img loading="lazy" variant="top" src={props.imgPath} alt="card-img" />
         <span className="link-icon">
           <GoArrowUpRight />
@@ -60,6 +61,6 @@ function ProjectCards(props) {
       </Card>
     </a>
   );
-}
+});
 
-export default ProjectCards;
+export default ProjectCard;

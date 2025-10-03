@@ -516,13 +516,23 @@ button:focus {
 .project-card-view {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
-  background-color: transparent !important;
-  opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
+  background-color: rgba(200, 137, 230, 0.637) !important;
+              
+  /* ESTADO INICIAL: Oculto y Desplazado */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              all 0.5s ease;
   height: fit-content !important;
   overflow: hidden;
   cursor: pointer !important;
   border-radius: 10px !important;
+}
+
+.project-card-view.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-card-view .skills
@@ -853,9 +863,14 @@ button:focus {
 }
 
 .tech-icons:hover {
-  transform: scale(1.05) !important;
+  /* ¡No tocamos el border! En su lugar, añadimos un box-shadow con el mismo color */
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  /* El primer valor (0 0 0) es el desplazamiento X, Y y desenfoque. 
+     El cuarto valor (2.2px) es la extensión (el grosor simulado). 
+     El último valor es el color deseado. */
+   box-shadow: 
+    4px 5px 4px 3px rgba(89, 4, 168, 0.137), /* Sombra Original */
+    0 0 0 2.2px rgba(197, 115, 230, 0.883) !important;  /* Borde Simulado */
 }
 
 .tech-icons:hover p{
