@@ -107,7 +107,8 @@
         "title": "Professional <1>Skillset</1>",
         "description": {
             "p1" : "I'm a versatile software developer with extensive experience across multiple <1>frameworks</1> and languages, primarily within the <3>JavaScript ecosystem</3>. My work spans both the <5>frontend and backend</5>. On the client side, I've built dynamic and responsive user interfaces using frameworks like <7>React</7> and <9>Angular</9>. For the server side, I've leveraged <11>Next.js</11> and <13>Express.js</13> to develop robust and scalable applications.",
-            "p2" : "Beyond my JavaScript proficiency, I have experience with <1>PHP</1>, where I've focused on creating custom <3>WordPress themes and plugins</3>. My skill set also includes mobile development, having built cross-platform applications with <5>React Native</5> and <7>Flutter</7>. I complement these abilities with expertise in <9>web scraping</9> using tools like <11>Playwright</11>, efficiently extracting data for various projects."
+            "p2" : "To complement my client-side skills and ensure product excellence, I have specialized in <1>UX/UI</1>. This allows me to move beyond code and contribute to the design phase by creating intuitive and modern <3>wireframes</3> and prototypes directly in <5>Figma</5>. My goal is to ensure that every project not only functions flawlessly but also delivers an exceptional user experience.",
+            "p3" : "Beyond my JavaScript proficiency, I have experience with <1>PHP</1>, where I've focused on creating custom <3>WordPress themes and plugins</3>. My skill set also includes mobile development, having built cross-platform applications with <5>React Native</5> and <7>Flutter</7>. I complement these abilities with expertise in <9>web scraping</9> using tools like <11>Playwright</11>, efficiently extracting data for various projects."
         },
         "tools": "<0>Tools</0> I use"
     },

@@ -38,6 +38,11 @@ function About() {
                     t <b></b> t <b></b> t <b></b> t <b></b> t <b></b> t <b></b> t <b></b> t
                   </Trans>
                 </p>
+                <p className="home-about-body pt-3">
+                  <Trans i18nKey="skills.description.p3">
+                    t <b></b> t <b></b> t <b></b> t <b></b> t <b></b> t <b></b> t <b></b> t
+                  </Trans>
+                </p>
               </Col>
               <Col
                 md={5}
