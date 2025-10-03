@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+
 // Encuentra el elemento raíz en tu HTML
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
