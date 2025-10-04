@@ -19,7 +19,7 @@ function Footer() {
           <h3> {t("footer.develop")} Fabian Flores</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-         <h3>Template by <a href="https://github.com/soumyajit4419/Portfolio" target="_blank" rel="noopener noreferrer">Soumyajit4419</a></h3>
+         {/* <h3>Template by <a href="https://github.com/soumyajit4419/Portfolio" target="_blank" rel="noopener noreferrer">Soumyajit4419</a></h3> */}
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
